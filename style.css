@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #34355b;
+
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  width: min(42.8rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+}
+
+.screen1 h1,
+.screen2 h2 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.screen1 p, .screen2 button {
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: normal;
+}
+
+.screen1 p {
+  font-weight: 400;
+  margin: 1.4rem auto 2.0rem;
+}
+
+.screen1 img {
+  width: 24.88rem;
+  height: 19.18rem;
+  cursor: pointer;
+}
+
+.screen1 img:hover {
+  animation: shakeIt  1s;
+}
+
+.screen1 button {
+  border: none;
+  background-color: #fff;
+}
+
+.screen2 {
+  width: 29.7rem;
+  text-align: center;
+}
+
+.screen2 .boxLuck {
+  padding: 1rem;
+  text-align: center;
+  background: #e4edf1;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(85, 85, 85, 0.5);
+  margin: 1.7rem auto;
+
+  /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+  animation: downTopGetBigger 3s;
+}
+
+.screen2 p {
+  font-family: "Dancing Script", cursive;
+  color: #000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+.screen2 img {
+  width: 30rem;
+  height: 20rem;
+  padding: 4.31rem 0 4.23rem 0;
+}
+
+.screen2 button {
+  cursor: pointer;
+
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  background: #ff9500;
+  border: none;
+
+  font-weight: 700;
+  color: #fff;
+
+  transition: background 2s;
+}
+
+.screen2 button:hover {
+  background: #dc8b18;
+}
+
+@keyframes downTopGetBigger{
+  0%{
+    transform: translateY(150px) translateX(15px) scale(0.03);
+  }
+  100%{
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+}
+
+@keyframes shakeIt {
+  10%, 90% {
+    transform: translate3d(-1px, 1px, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(1px, 1px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 2px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, -2px, 0);
+  }
+}
